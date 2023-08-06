@@ -1,5 +1,5 @@
 class Endpoints {
-  static String apiKey = 'b1b15e88fa797225412429c1c50c122a1';
+  static String apiKey = 'dc1501da17dda96bdf54231721a42f85';
   static String baseUrl =
-      'https://api.openweathermap.org/data/2.5/forecast?appid=$apiKey';
+      'https://api.openweathermap.org/data/2.5/forecast?appid=$apiKey&units=metric';
 }

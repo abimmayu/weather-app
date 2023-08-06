@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 
 class ButtonChosenDay extends StatelessWidget {
-  const ButtonChosenDay({
+  ButtonChosenDay({
     super.key,
     this.onTap,
-    required this.child,
-    this.radius,
     this.height,
     this.width,
+    required this.color,
+    this.radius,
+    required this.child,
   });
 
   final Function()? onTap;
   final double? height;
   final double? width;
+  Color color;
   final double? radius;
   final Widget child;
 
@@ -25,7 +27,7 @@ class ButtonChosenDay extends StatelessWidget {
         width: width,
         decoration: BoxDecoration(
           border: Border.all(
-            color: Colors.white,
+            color: color,
           ),
           borderRadius: BorderRadius.circular(radius ?? 8),
         ),
