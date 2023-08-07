@@ -245,7 +245,8 @@ class _HomePageState extends State<HomePage> {
                                               ),
                                               OriginTextStyle().normalTextStyle(
                                                 padding: EdgeInsets.zero,
-                                                text: '20%',
+                                                text:
+                                                    '${result.list[0].main?.humidity}%',
                                                 color:
                                                     ColorPalatte().primaryColor,
                                                 fontSize: fontSizeBottom,
@@ -270,7 +271,8 @@ class _HomePageState extends State<HomePage> {
                                             ),
                                             OriginTextStyle().normalTextStyle(
                                               padding: EdgeInsets.zero,
-                                              text: '5.6km/h',
+                                              text:
+                                                  '${result.list[0].wind?.speed}km/h',
                                               color:
                                                   ColorPalatte().primaryColor,
                                               fontSize: fontSizeBottom,
@@ -306,7 +308,8 @@ class _HomePageState extends State<HomePage> {
                                               ),
                                               OriginTextStyle().normalTextStyle(
                                                 padding: EdgeInsets.zero,
-                                                text: '1026mbar',
+                                                text:
+                                                    '${result.list[0].main?.pressure}mbar',
                                                 color:
                                                     ColorPalatte().primaryColor,
                                                 fontSize: fontSizeBottom,
@@ -323,7 +326,7 @@ class _HomePageState extends State<HomePage> {
                                                 bottom:
                                                     ScreenUtil().setHeight(10),
                                               ),
-                                              text: 'UV Index',
+                                              text: 'P.O.P',
                                               color: ColorPalatte()
                                                   .primaryColor
                                                   .withOpacity(0.5),
@@ -331,7 +334,8 @@ class _HomePageState extends State<HomePage> {
                                             ),
                                             OriginTextStyle().normalTextStyle(
                                               padding: EdgeInsets.zero,
-                                              text: '0',
+                                              text:
+                                                  '${result.list[0].pop * 100}%',
                                               color:
                                                   ColorPalatte().primaryColor,
                                               fontSize: fontSizeBottom,
@@ -367,7 +371,8 @@ class _HomePageState extends State<HomePage> {
                                               ),
                                               OriginTextStyle().normalTextStyle(
                                                 padding: EdgeInsets.zero,
-                                                text: '27°',
+                                                text:
+                                                    '${result.list[0].main?.feelsLike.round()}°',
                                                 color:
                                                     ColorPalatte().primaryColor,
                                                 fontSize: fontSizeBottom,
@@ -384,7 +389,7 @@ class _HomePageState extends State<HomePage> {
                                                 bottom:
                                                     ScreenUtil().setHeight(10),
                                               ),
-                                              text: 'Chance of Rain',
+                                              text: 'Rain Volume',
                                               color: ColorPalatte()
                                                   .primaryColor
                                                   .withOpacity(0.5),
@@ -392,7 +397,9 @@ class _HomePageState extends State<HomePage> {
                                             ),
                                             OriginTextStyle().normalTextStyle(
                                               padding: EdgeInsets.zero,
-                                              text: '7%',
+                                              text: result.list[0].rain != null
+                                                  ? '${result.list[0].rain?.h3}mm'
+                                                  : '-',
                                               color:
                                                   ColorPalatte().primaryColor,
                                               fontSize: fontSizeBottom,
